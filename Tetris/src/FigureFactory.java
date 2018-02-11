@@ -37,9 +37,9 @@ public class FigureFactory {
             }
     };
 
-    public static Figure creatRundomFigure(){
+    public static Figure creatRundomFigure(int x, int y){
         int i = (int) (Math.random()*6);
-        return new Figure(0,0,figures[i]);
+        return new Figure(x,y,figures[i]);
     }
 
 

@@ -1,5 +1,17 @@
 public class Field
 {
+	public int getWeight() {
+		return weight;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int[][] getMatrix() {
+		return matrix;
+	}
+
 	private int weight;
 	private int height;
 	private int [][] matrix;
@@ -11,9 +23,7 @@ public class Field
 		this.matrix = new int [height][weight];
 	}
 	
-	public void print(){
-		
-	}
+
 	
 	public void removeFullLines(){
 		
