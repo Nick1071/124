@@ -16,6 +16,5 @@ public class Tetris
 	{
 		game = new Tetris();
 		game.run();
-		//
 	}
 }
