@@ -1,8 +1,7 @@
-import java.util.*;
-
-public class Main
+public class Tetris
 {
 	public static void main(String[] args)
 	{
+	
 		}
 }
