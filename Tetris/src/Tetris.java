@@ -4,13 +4,19 @@ public class Tetris
 {
 	private Field field;
 	private Figure figure;
-	private static Tetris game;
+	public static Tetris game;
 	private boolean isGameOver;
 
 	public Tetris(int weight, int height) {
 		this.field = new Field(weight, height);
 		this.figure = FigureFactory.creatRundomFigure(weight/2-1,0);
 		this.isGameOver = false;
+	}
+
+
+	public Field getField()
+	{
+		return field;
 	}
 
 	public void print(){
@@ -43,7 +49,7 @@ public class Tetris
 			switch (keyboardObserver.getMove()){
 				case LEFT: figure.left();break;
 				case RIGHT: figure.right();break;
-				case DOWN: figure.down();break;
+				case DOWNMAX: figure.downMaximum();break;
 				case ROTATE: figure.rotate();break;
 			}
 			step();
@@ -52,6 +58,7 @@ public class Tetris
 		}
 
 	public void step(){
+		figure.down();
 		
 	}
 	

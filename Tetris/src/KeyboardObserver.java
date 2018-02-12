@@ -8,7 +8,7 @@ public class KeyboardObserver{
     public enum Move {
         RIGHT,
         LEFT,
-        DOWN,
+        DOWNMAX,
         ROTATE,
         NOUN
     }
@@ -19,16 +19,16 @@ public class KeyboardObserver{
         String c = scanner.nextLine();
         Move move;
         switch (c) {
-            case "r":
+            case "l":
                 move = Move.RIGHT;
                 break;
-            case "l":
+            case "j":
                 move = Move.LEFT;
                 break;
-            case "d":
-                move = Move.DOWN;
+            case "m":
+                move = Move.DOWNMAX;
                 break;
-            case "rr":
+            case "k":
                 move = Move.ROTATE;
                 break;
             default:
