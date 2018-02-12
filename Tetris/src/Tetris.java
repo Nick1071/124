@@ -59,7 +59,13 @@ public class Tetris
 
 	public void step(){
 		figure.down();
-		
+		if(!figure.isCurrentPositionAvailable()){
+			figure.up();
+			figure.landed();
+			field.removeFullLines();
+			figure = FigureFactory.creatRundomFigure(field.getWeight()/2-1,0);
+			if(!figure.isCurrentPositionAvailable()) isGameOver = true;
+		}
 	}
 	
 	public static void main(String[] args)
